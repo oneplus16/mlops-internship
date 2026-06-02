@@ -1,0 +1,36 @@
+2026-06-02T15:14:29 | INFO     | mlops_job | ============================================================
+2026-06-02T15:14:29 | INFO     | mlops_job | MLOps Batch Job — START
+2026-06-02T15:14:29 | INFO     | mlops_job | Args: input=data.csv  config=config.yaml  output=metrics.json  log_file=run.log
+2026-06-02T15:14:29 | INFO     | mlops_job | Loading config from: config.yaml
+2026-06-02T15:14:29 | INFO     | mlops_job | Config loaded — version=v1  seed=42  window=5
+2026-06-02T15:14:29 | INFO     | mlops_job | Random seed set: 42
+2026-06-02T15:14:29 | INFO     | mlops_job | Loading dataset from: data.csv
+2026-06-02T15:14:29 | INFO     | mlops_job | Dataset loaded — 10000 usable rows (dropped 0 bad rows)
+2026-06-02T15:14:29 | DEBUG    | mlops_job | Columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
+2026-06-02T15:14:29 | DEBUG    | mlops_job | close  min=67.0893  max=155.7800
+2026-06-02T15:14:29 | INFO     | mlops_job | Computing rolling mean — window=5
+2026-06-02T15:14:29 | DEBUG    | mlops_job | Rolling mean computed — 4 warm-up NaN rows (excluded from signal)
+2026-06-02T15:14:29 | INFO     | mlops_job | Computing binary signal (close > rolling_mean → 1, else 0)
+2026-06-02T15:14:29 | DEBUG    | mlops_job | Signal distribution — 1s: 4989  0s: 5007  NaN (warm-up): 4
+2026-06-02T15:14:29 | INFO     | mlops_job | Processing complete — rows_processed=9996  signal_rate=0.4991  latency_ms=39.14
+2026-06-02T15:14:29 | INFO     | mlops_job | Metrics written to metrics.json: {'version': 'v1', 'rows_processed': 9996, 'metric': 'signal_rate', 'value': 0.4991, 'latency_ms': 39.14, 'seed': 42, 'status': 'success'}
+2026-06-02T15:14:29 | INFO     | mlops_job | MLOps Batch Job — END
+2026-06-02T15:14:29 | INFO     | mlops_job | ============================================================
+2026-06-02T15:22:09 | INFO     | mlops_job | ============================================================
+2026-06-02T15:22:09 | INFO     | mlops_job | MLOps Batch Job — START
+2026-06-02T15:22:09 | INFO     | mlops_job | Args: input=data.csv  config=config.yaml  output=metrics.json  log_file=run.log
+2026-06-02T15:22:09 | INFO     | mlops_job | Loading config from: config.yaml
+2026-06-02T15:22:09 | INFO     | mlops_job | Config loaded — version=v1  seed=42  window=5
+2026-06-02T15:22:09 | INFO     | mlops_job | Random seed set: 42
+2026-06-02T15:22:09 | INFO     | mlops_job | Loading dataset from: data.csv
+2026-06-02T15:22:09 | INFO     | mlops_job | Dataset loaded — 10000 usable rows (dropped 0 bad rows)
+2026-06-02T15:22:09 | DEBUG    | mlops_job | Columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
+2026-06-02T15:22:09 | DEBUG    | mlops_job | close  min=67.0893  max=155.7800
+2026-06-02T15:22:09 | INFO     | mlops_job | Computing rolling mean — window=5
+2026-06-02T15:22:09 | DEBUG    | mlops_job | Rolling mean computed — 4 warm-up NaN rows (excluded from signal)
+2026-06-02T15:22:09 | INFO     | mlops_job | Computing binary signal (close > rolling_mean → 1, else 0)
+2026-06-02T15:22:09 | DEBUG    | mlops_job | Signal distribution — 1s: 4989  0s: 5007  NaN (warm-up): 4
+2026-06-02T15:22:09 | INFO     | mlops_job | Processing complete — rows_processed=10000  signal_rate=0.4989  latency_ms=46.98
+2026-06-02T15:22:09 | INFO     | mlops_job | Metrics written to metrics.json: {'version': 'v1', 'rows_processed': 10000, 'metric': 'signal_rate', 'value': 0.4989, 'latency_ms': 46.98, 'seed': 42, 'status': 'success'}
+2026-06-02T15:22:09 | INFO     | mlops_job | MLOps Batch Job — END
+2026-06-02T15:22:09 | INFO     | mlops_job | ============================================================
